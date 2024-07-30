@@ -57,4 +57,15 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+  config.action_mailer.default_url_options = { host: Rails.application.credentials.APP_URL, port: 443 }
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => 'mailpit.traefik.me',
+      :port                 => 1025,
+      :enable_starttls_auto => true
+  }
+
+  config.hosts << Rails.application.credentials.APP_URL
 end

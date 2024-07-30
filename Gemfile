@@ -38,7 +38,8 @@ gem 'annotate'
 
 # Authenticate
 gem 'devise'
-gem 'devise-api'
+gem 'devise_uid'
+gem 'devise-api', github: 'nejdetkadir/devise-api', branch: 'main'
 
 # Serializer
 gem 'jsonapi-serializer'
@@ -125,6 +126,11 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
+  # RSpec runner and formatters [https://github.com/rspec/rspec-core]
+  gem 'rspec-core'
+
+  # Common code needed by the other RSpec gems. Not intended for direct use [https://github.com/rspec/rspec-support]
+  gem 'rspec-support'
   # RSpec formatters
   gem 'rspec-sonarqube-formatter', '~> 1.5', require: false
 

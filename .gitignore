@@ -30,3 +30,4 @@
 
 .docker/
 !/.docker/bundle/.keep
+/config/credentials/test.key

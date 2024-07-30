@@ -75,7 +75,7 @@ WORKDIR /usr/src/app
 # ENTRYPOINT ["./bin/docker-entrypoint.sh"]
 
 # [Optional] Set the default user. Omit if you want to keep the default as root.
-# USER $USERNAME
+USER $USERNAME
 
 EXPOSE 3000
 
